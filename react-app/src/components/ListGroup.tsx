@@ -17,7 +17,7 @@ function ListGroup() {
     return (
         <>
         <h1>Locations</h1>
-        {items.length === 0 && <p>No items to display</p>}
+        {items.length === 0 ? <p>No items to display</p> : null}
         <ul className="list-group">
             {items.map(item => <li key={item}>{item}</li>)}
         </ul>
