@@ -11,14 +11,16 @@ function ListGroup() {
         'Clapham',
     ];
 
-    items = [];
 
-    const message = items.length === 0 ? <p>No items to display</p> : null;
+    
+    const getMessage = () => {
+        return items.length === 0 ? <p>No items to display</p> : null;
+    };
     
     return (
         <>
         <h1>Locations</h1>
-        {message}
+        {getMessage()}
         <ul className="list-group">
             {items.map(item => <li key={item}>{item}</li>)}
         </ul>
